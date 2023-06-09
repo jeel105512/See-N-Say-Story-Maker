@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* Assignment 1 | COMP1073 Client-Side JavaScript */
+*{
+    /* outline: 1px dotted #fff; */
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+html{
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+
+    background: #292929;
+    color: #fff;
+}
+
+header{
+    width: 100%;
+    height: 25%;
+    font-size: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75em;
+}
+
+#textToSpeak{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main{
+    width: 100%;
+    height: 110%;
+}
+
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 10%;
+}
+
+.number{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+
+    border-right: 1px solid #585858;
+    border-top: 1px solid #585858;
+
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.number:hover{
+    background: #fff;
+    color: #000;
+}
+
+.columns{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    height: 80%;
+}
+
+.column{
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+
+    border-right: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+}
+
+.column div{
+    font-size: 1.25rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid #585858;
+
+    transition: all ease 0.4s;
+}
+
+.selected{
+    background: #fff;
+    color: #000;
+}
+
+.buttons{
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.buttons button{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    
+    transition: all ease 0.4s;
+}
+
+.buttons button:nth-child(1):hover{
+    background: #ff4242;
+    border: none;
+}
+
+.buttons button:nth-child(2):hover{
+    background: #5bff42;
+    border: none;
+}
+
+.buttons button:nth-child(3):hover{
+    background: #d1e43b;
+    border: none;
+}
+
+footer{
+    text-align: center;
+    margin-top: 4rem;
+}
