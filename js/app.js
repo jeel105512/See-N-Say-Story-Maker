@@ -2,12 +2,6 @@
 
 /* Variables
 -------------------------------------------------- */
-const nounes = ["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
-const verbs = ["sat on", "ate", "danced with", "saw", "doesn't like", "kissed"];
-const adjectives = ["a funny", "a scary", "a goofy", "a slimy", "a barking", "a fat"];
-const anotherNounes = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
-const places = ["on the moon", "on the chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
-
 const nounesButton = document.querySelector(".nounes");
 const verbsButton = document.querySelector(".verbs");
 const adjectivesButton = document.querySelector(".adjectives");
@@ -22,6 +16,19 @@ const verbsWords = document.querySelectorAll(".column:nth-child(2) > div")
 const adjectivesWords = document.querySelectorAll(".column:nth-child(3) > div")
 const anotherNounesWords = document.querySelectorAll(".column:nth-child(4) > div")
 const placesWords = document.querySelectorAll(".column:nth-child(5) > div")
+
+// const nounes = ["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
+// const verbs = ["sat on", "ate", "danced with", "saw", "doesn't like", "kissed"];
+// const adjectives = ["a funny", "a scary", "a goofy", "a slimy", "a barking", "a fat"];
+// const anotherNounes = ["goat", "monkey", "fish", "cow", "frog", "bug", "worm"];
+// const places = ["on the moon", "on the chair", "in my spaghetti", "in my soup", "on the grass", "in my shoes"];
+
+/* Just making the arrays dynamic */
+const nounes = Array.from(nounesWords, e => e.textContent);
+const verbs = Array.from(verbsWords, e => e.textContent);
+const adjectives = Array.from(adjectivesWords, e => e.textContent);
+const anotherNounes = Array.from(anotherNounesWords, e => e.textContent);
+const places = Array.from(placesWords, e => e.textContent);
 
 const textToSpeakPTag = document.querySelector("#textToSpeak");
 
