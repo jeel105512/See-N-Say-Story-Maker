@@ -11,11 +11,11 @@ const placesButton = document.querySelector(".places");
 const surpriseButton = document.querySelector(".surprise");
 const resetButton = document.querySelector(".reset");
 
-const nounesWords = document.querySelectorAll(".column:nth-child(1) > div")
-const verbsWords = document.querySelectorAll(".column:nth-child(2) > div")
-const adjectivesWords = document.querySelectorAll(".column:nth-child(3) > div")
-const anotherNounesWords = document.querySelectorAll(".column:nth-child(4) > div")
-const placesWords = document.querySelectorAll(".column:nth-child(5) > div")
+const nounesWords = document.querySelectorAll(".column:nth-child(1) > div > p")
+const verbsWords = document.querySelectorAll(".column:nth-child(2) > div > p")
+const adjectivesWords = document.querySelectorAll(".column:nth-child(3) > div > p")
+const anotherNounesWords = document.querySelectorAll(".column:nth-child(4) > div > p")
+const placesWords = document.querySelectorAll(".column:nth-child(5) > div > p")
 
 // const nounes = ["The turkey", "Mom", "Dad", "The dog", "My teacher", "The elephant", "The cat"];
 // const verbs = ["sat on", "ate", "danced with", "saw", "doesn't like", "kissed"];
@@ -133,9 +133,9 @@ speakButton.addEventListener('click', function () {
 function addSelectedClass(arrOfWords, nodeListOfWords, wordToSpeak){
 	var index = arrOfWords.indexOf(wordToSpeak);
 	nodeListOfWords.forEach(ele => {
-		ele.classList.remove("selected");
+		ele.parentNode.classList.remove("selected");
 	})
-	nodeListOfWords[index].classList.add("selected");
+	nodeListOfWords[index].parentNode.classList.add("selected");
 }
 
 function surpriseHighlightWords(){
@@ -160,7 +160,7 @@ surpriseButton.addEventListener("click", () => {
 
 function removeSelectedClassFromNodeList(nodeListOfWords){
 	nodeListOfWords.forEach(ele => {
-		ele.classList.remove("selected");
+		ele.parentNode.classList.remove("selected");
 	});
 }
 
